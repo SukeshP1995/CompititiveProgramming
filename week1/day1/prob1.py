@@ -1,7 +1,5 @@
 def get_max_profit(stock_prices):
-    # Calculate the max profit
-                                   
-    assert(max_i >= 2)
+    # Calculate the max profit                        
     min_v = stock_prices[0]
     max_v = stock_prices[1] - min_v
     for e in stock_prices[1:]:
