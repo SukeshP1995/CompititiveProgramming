@@ -43,7 +43,8 @@ def is_balanced(tree_root):
 
 
 
-
+class height:
+    height = 0
 
 
 
