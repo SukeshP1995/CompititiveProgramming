@@ -2,7 +2,7 @@ import unittest
 
 def get_permutations_helper(lst):
     if len(lst) == 0:
-        return []
+        return ['']
     if len(lst) == 1:
         return [lst]
     l = []
@@ -10,15 +10,12 @@ def get_permutations_helper(lst):
         m = lst[i]
         rlst = lst[:i] + lst[i+1:]
         for t in get_permutations_helper(rlst):
-            l.append([m] + t)
+            l.append(m + t)
     return l
 def get_permutations(string):
 
     # Generate all permutations of the input string
-    perms = [''.join(perm) for perm in get_permutations_helper(list(string))]
-    if len(perms) == 0:
-        perms = [''] 
-    return set(perms)
+    return set(list(get_permutations_helper(string)) + [])
 
 
 

@@ -6,7 +6,7 @@ def has_palindrome_permutation(the_string):
     check = [0]*26
     for c in the_string:
         check[ord(c) - 97] = (check[ord(c) - 97] + 1)%2
-    return (check.count(1) == 1) or (check.count(1) == 0)
+    return (check.count(1) <= 1)
 
 
 
