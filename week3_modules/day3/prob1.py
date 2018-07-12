@@ -4,9 +4,23 @@ import unittest
 def find_duplicate(int_list):
 
     # Find a number that appears more than once ... in O(n) time
-    
+    n = len(int_list)
+    i = n
+    j = n
+    while True:
+        i = int_list[i-1]
+        j = int_list[j-1]
+        j = int_list[j-1]
+        if i == j:
+            break
+    j = n
 
-    return 0
+    while True:
+        i = int_list[i-1]
+        j = int_list[j-1]
+        if i == j:
+            break
+    return i
 
 
 
