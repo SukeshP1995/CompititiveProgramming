@@ -16,13 +16,14 @@ grids = [[[1, 0, 0, 0, 1],
 
 
 
-v = []
-h = []
+
 
 
 
 for grid in grids:
-
+	
+	h = []
+	v = []
 	print(grid)
 	for r in range(len(grid)):
 		for c in range(len(grid[r])):
@@ -31,16 +32,16 @@ for grid in grids:
 				v.append(c)
 	v.sort()
 	h.sort()
-
+	# print(v, h)
 
 	m = len(v)//2
-
-	x = h[m]
-	y = v[m]
-
 	dist = 0
-	for r in range(len(grid)):
-		for c in range(len(grid[r])):
-			if grid[r][c]==1:
-				dist += abs(x-r) + abs(y-c)
+	if v and h:
+		x = h[m]
+		y = v[m]
+
+		for r in range(len(grid)):
+			for c in range(len(grid[r])):
+				if grid[r][c]==1:
+					dist += abs(x-r) + abs(y-c)
 	print(dist)
